@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #242424;
+  color: aliceblue;
+  font-size: 32px;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
+  height: 70vh;
+  width: 60%;
+  box-sizing: border-box;
+  border: 3px solid #9c27e0;
+  overflow: auto;
+}
+.todo-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.brand-name {
+  margin: 16px 0px;
+  text-align: center;
+  font-size: 4rem;
+}
+.tagline {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 2rem;
+}
+.todo-form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 80%;
+}
+.todo-input {
+  background: none;
+  border: 3px solid #00ffff;
+  border-radius: 32px;
+  box-sizing: border-box;
+  width: 80%;
+  margin-right: 10%;
+  outline: none;
+  transition: 0.25s cubic-bezier(0.27, 0.49, 0.62, 1.47);
+}
+.todo-input::placeholder {
+  color: #999;
+  padding: 8px 32px;
+}
+.todo-input:focus {
+  border: 3px solid #ffffff;
+  padding: 8px 32px;
+  transform: none;
+  color: #fff;
+  transition: 0.25s cubic-bezier(0.27, 0.49, 0.62, 1.47);
 }
 
-.App-link {
-  color: #61dafb;
+.todo-button {
+  width: 10%;
+  background: none;
+  border: 3px solid #00ffff;
+  border-radius: 32px;
+  color: #00ffff;
+  transition: 0.5s cubic-bezier(0.27, 0.49, 0.62, 1.47);
+}
+.todo-button:hover {
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  transition: 0.5s cubic-bezier(0.27, 0.49, 0.62, 1.47);
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-row {
+  width: 80%;
+  border-radius: 32px;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-row:nth-of-type(odd) {
+  border: 3px solid #fe00ff;
+}
+.todo-row:nth-of-type(odd):hover {
+  color: #fe00ff;
+  border: 3px solid #ffffff;
+  transition: 0.25s cubic-bezier(0.27, 0.49, 0.62, 1.47);
+}
+.todo-row:nth-of-type(even) {
+  border: 3px solid #57dcbe;
+}
+.todo-row:nth-of-type(even):hover {
+  color: #57dcbe;
+  border: 3px solid #ffffff;
+  transition: 0.25s cubic-bezier(0.27, 0.49, 0.62, 1.47);
+}
+
+.todo-text {
+  display: inline-block;
+  max-width: 90%;
+  padding: 8px 32px;
+  word-break: break-all;
+}
+.icons {
+  display: inline-flex;
+  width: 10%;
+  justify-content: center;
 }
